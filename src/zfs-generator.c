@@ -170,7 +170,7 @@ int generateScanUnit(char *directory, const char *targetName, const char *unitNa
 [Unit]\n\
 Description=Import ZFS pools by device scanning\n\
 DefaultDependencies=no\n\
-Requires=systemd-udev-settle.service\n\
+Wants=systemd-udev-settle.service\n\
 After=systemd-udev-settle.service\n\
 After=cryptsetup.target\n\
 Before=sysroot.mount\n\
